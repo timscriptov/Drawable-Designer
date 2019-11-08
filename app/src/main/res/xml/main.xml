@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListPreference
+        android:key="drawable_list"
+        android:summary="%s"
+        android:title="Drawable List" />
+    <Preference
+        android:key="edit_drawable"
+        android:title="Edit Selected Drawable" />
+</PreferenceScreen>

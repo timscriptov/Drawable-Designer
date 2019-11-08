@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="gradientValues">
+        <item>linear</item>
+        <item>radial</item>
+        <item>sweep</item>
+    </string-array>
+    <string-array name="gradients">
+        <item>Linear</item>
+        <item>Radial</item>
+        <item>Sweep</item>
+    </string-array>
+    <string-array name="shapeValues">
+        <item>rectangle</item>
+        <item>oval</item>
+        <item>line</item>
+        <item>ring</item>
+    </string-array>
+    <string-array name="shapes">
+        <item>Rectangle</item>
+        <item>Oval</item>
+        <item>Line</item>
+        <item>Ring</item>
+    </string-array>
+</resources>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_vertical_margin">16.0dip</dimen>
+    <item name="disabled_alpha_material_dark" type="dimen">0.3</item>
+    <item name="disabled_alpha_material_light" type="dimen">0.26</item>
+    <item name="highlight_alpha_material_colored" type="dimen">0.26</item>
+    <item name="highlight_alpha_material_dark" type="dimen">0.2</item>
+    <item name="highlight_alpha_material_light" type="dimen">0.12</item>
+    <dimen name="item_touch_helper_max_drag_scroll_per_frame">20.0dip</dimen>
+    <dimen name="item_touch_helper_swipe_escape_max_velocity">800.0dip</dimen>
+    <dimen name="item_touch_helper_swipe_escape_velocity">120.0dip</dimen>
+    <dimen name="notification_large_icon_height">64.0dip</dimen>
+    <dimen name="notification_large_icon_width">64.0dip</dimen>
+    <dimen name="notification_subtext_size">12.0dip</dimen>
+    <dimen name="seekbar_text_min_width">32.0dip</dimen>
+</resources>

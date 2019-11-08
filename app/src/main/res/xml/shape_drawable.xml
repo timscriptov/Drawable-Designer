@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ListPreference
+        android:entries="@array/shapes"
+        android:entryValues="@array/shapeValues"
+        android:key="@string/shapeType"
+        android:summary="%s"
+        android:title="Shape" />
+    <PreferenceCategory
+        android:title="Rectangle Corners"
+        app:key="@string/rectangle">
+        <com.mcal.drawabledesigner.preference.SeekBarPreference
+            format="%ddp"
+            max="40"
+            min="0"
+            android:key="@string/allCorners"
+            android:title="All Corners" />
+        <com.mcal.drawabledesigner.preference.SeekBarPreference
+            format="%ddp"
+            max="40"
+            min="0"
+            android:key="@string/topLeftCorner"
+            android:title="Top Left Corner" />
+        <com.mcal.drawabledesigner.preference.SeekBarPreference
+            format="%ddp"
+            max="40"
+            min="0"
+            android:key="@string/topRightCorner"
+            android:title="Top Right Corner" />
+        <com.mcal.drawabledesigner.preference.SeekBarPreference
+            format="%ddp"
+            max="40"
+            min="0"
+            android:key="@string/bottomRightCorner"
+            android:title="Bottom Right Corner" />
+        <com.mcal.drawabledesigner.preference.SeekBarPreference
+            format="%ddp"
+            max="40"
+            min="0"
+            android:key="@string/bottomLeftCorner"
+            android:title="Bottom Left Corner" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:key="@string/ring"
+        android:title="Ring">
+        <CheckBoxPreference
+            android:key="@string/useRadiusRatio"
+            android:title="Radius Ratio" />
+        <com.mcal.drawabledesigner.preference.SeekBarPreference
+            format="%ddp"
+            max="100"
+            min="0"
+            android:key="@string/innerRadius"
+            android:title="Inner Radius" />
+        <com.mcal.drawabledesigner.preference.SeekBarPreference
+            format="width/%d"
+            max="25"
+            min="1"
+            android:key="@string/innerRadiusRatio"
+            android:title="Inner Radius Ratio" />
+        <CheckBoxPreference
+            android:key="@string/useThicknessRatio"
+            android:title="Thickness Ratio" />
+        <com.mcal.drawabledesigner.preference.SeekBarPreference
+            format="%ddp"
+            max="100"
+            min="0"
+            android:key="@string/ringThickness"
+            android:title="Ring Thickness" />
+        <com.mcal.drawabledesigner.preference.SeekBarPreference
+            format="width/%d"
+            max="25"
+            min="1"
+            android:key="@string/ringThicknessRatio"
+            android:title="Ring Thickness Ratio" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Color" />
+    <CheckBoxPreference
+        android:key="@string/useGradient"
+        android:title="Gradient" />
+    <com.mcal.drawabledesigner.preference.ColorPickerPreference
+        android:key="@string/solidColor"
+        android:title="Solid Color" />
+    <PreferenceCategory
+        android:key="@string/gradient"
+        android:title="Gradient">
+        <CheckBoxPreference
+            android:key="@string/useCenterColor"
+            android:title="Use Center Color" />
+        <ListPreference
+            android:entries="@array/gradients"
+            android:entryValues="@array/gradientValues"
+            android:key="@string/gradientType"
+            android:summary="%s"
+            android:title="Gradient Type" />
+        <com.mcal.drawabledesigner.preference.SeekBarPreference
+            format="%ddeg"
+            increment="45"
+            max="315"
+            min="0"
+            android:key="@string/angle"
+            android:title="Angle" />
+        <com.mcal.drawabledesigner.preference.SeekBarPreference
+            displayResolution="100"
+            format="%2$ddp\n%d%%"
+            max="300"
+            min="0"
+            android:key="@string/centerX"
+            android:title="Center X" />
+        <com.mcal.drawabledesigner.preference.SeekBarPreference
+            displayResolution="100"
+            format="%2$ddp\n%d%%"
+            max="300"
+            min="0"
+            android:key="@string/centerY"
+            android:title="Center Y" />
+        <com.mcal.drawabledesigner.preference.SeekBarPreference
+            format="%ddp"
+            max="300"
+            min="1"
+            android:key="@string/gradientRadius"
+            android:title="Radius" />
+        <com.mcal.drawabledesigner.preference.ColorPickerPreference
+            android:key="@string/startColor"
+            android:title="Start Color" />
+        <com.mcal.drawabledesigner.preference.ColorPickerPreference
+            android:key="@string/centerColor"
+            android:title="Center Color" />
+        <com.mcal.drawabledesigner.preference.ColorPickerPreference
+            android:key="@string/endColor"
+            android:title="End Color" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Stroke" />
+    <CheckBoxPreference
+        android:key="@string/useStroke"
+        android:title="Stroke" />
+    <com.mcal.drawabledesigner.preference.ColorPickerPreference
+        android:key="@string/strokeColor"
+        android:title="Stroke Color" />
+    <com.mcal.drawabledesigner.preference.SeekBarPreference
+        format="%ddp"
+        max="20"
+        min="0"
+        android:key="@string/strokeWidth"
+        android:title="Stroke Thickness" />
+    <SwitchPreferenceCompat
+        android:key="@string/solidStroke"
+        android:summaryOff="Dashed Stroke"
+        android:summaryOn="Solid Stroke"
+        android:switchTextOff="Dash"
+        android:switchTextOn="Solid" />
+    <com.mcal.drawabledesigner.preference.SeekBarPreference
+        format="%ddp"
+        max="50"
+        min="0"
+        android:key="@string/dashWidth"
+        android:title="Dash Length" />
+    <com.mcal.drawabledesigner.preference.SeekBarPreference
+        format="%ddp"
+        max="50"
+        min="0"
+        android:key="@string/dashGap"
+        android:title="Dash Gap" />
+    <PreferenceCategory android:title="Shape Size" />
+    <CheckBoxPreference
+        android:key="@string/useShapeSize"
+        android:title="Shape Size" />
+    <com.mcal.drawabledesigner.preference.SeekBarPreference
+        format="%ddp"
+        max="320"
+        min="0"
+        android:key="@string/shapeWidth"
+        android:title="Shape Width" />
+    <com.mcal.drawabledesigner.preference.SeekBarPreference
+        format="%ddp"
+        max="320"
+        min="0"
+        android:key="@string/shapeHeight"
+        android:title="Shape Height" />
+    <PreferenceCategory android:title="Padding" />
+    <CheckBoxPreference
+        android:key="@string/usePadding"
+        android:title="Padding" />
+    <com.mcal.drawabledesigner.preference.SeekBarPreference
+        format="%ddp"
+        max="40"
+        min="0"
+        android:key="@string/paddingLeft"
+        android:title="Padding Left" />
+    <com.mcal.drawabledesigner.preference.SeekBarPreference
+        format="%ddp"
+        max="40"
+        min="0"
+        android:key="@string/paddingRight"
+        android:title="Padding Right" />
+    <com.mcal.drawabledesigner.preference.SeekBarPreference
+        format="%ddp"
+        max="40"
+        min="0"
+        android:key="@string/paddingTop"
+        android:title="Padding Top" />
+    <com.mcal.drawabledesigner.preference.SeekBarPreference
+        format="%ddp"
+        max="40"
+        min="0"
+        android:key="@string/paddingBottom"
+        android:title="Padding Bottom" />
+    <PreferenceCategory android:title="Levels">
+        <CheckBoxPreference
+            android:key="@string/useShapeLevel"
+            android:title="Shape Level" />
+        <CheckBoxPreference
+            android:key="@string/useGradientLevel"
+            android:title="Gradient Level" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="File" />
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="@string/saveImage"
+        android:title="Save Image" />
+    <com.mcal.drawabledesigner.preference.ExportPreference
+        android:key="@string/save"
+        android:title="Save" />
+    <PreferenceCategory android:title="Preview">
+        <com.mcal.drawabledesigner.preference.SeekBarPreference
+            format="%ddp"
+            max="320"
+            min="0"
+            android:key="@string/previewWidth"
+            android:title="Preview Width" />
+        <com.mcal.drawabledesigner.preference.SeekBarPreference
+            format="%ddp"
+            max="320"
+            min="0"
+            android:key="@string/previewHeight"
+            android:title="Preview Height" />
+        <com.mcal.drawabledesigner.preference.SeekBarPreference
+            displayResolution="100"
+            format="%2$d\n%d%%"
+            max="10000"
+            min="1"
+            android:key="@string/previewLevel"
+            android:title="Preview Level" />
+    </PreferenceCategory>
+</PreferenceScreen>

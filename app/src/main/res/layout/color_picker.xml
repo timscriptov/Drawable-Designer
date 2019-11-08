@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/color"
+    android:layout_width="30dip"
+    android:layout_height="30dip"
+    android:layout_gravity="center_vertical"
+    android:background="#fff90202" />
